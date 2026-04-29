@@ -2,7 +2,7 @@
 
 **Tên đề thi:** Đề thi thử TN THPT thành phố Đà Nẵng năm 2025-2026
 **Đường dẫn tệp:**
-[DN_testing.pdf](../Math-12/original_unsolved_problems/DN_testing.pdf)
+![DN_testing.pdf](../Math-12/original_unsolved_problems/DN_testing.pdf)
 
 ---
 
