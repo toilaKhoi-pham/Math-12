@@ -1,5 +1,16 @@
 # NHẬT KÝ HỌC TẬP: BÀI TOÁN TỐI ƯU HÓA CHI PHÍ
 
+**Tên đề thi:** Đề thi thử TN THPT thành phố Đà Nẵng năm 2025-2026
+**Đường dẫn tệp:**
+![DN_testing.pdf](../Math-12/original_unsolved_problems/DN_testing.pdf)
+
+---
+
+## 0. Đề bài gốc (Câu 4 - Phần III)
+> Trong ngành hàng hải, lượng nhiên liệu tiêu thụ của một con tàu trong một đơn vị thời gian xấp xỉ tỷ lệ thuận với lập phương vận tốc của nó. Một tàu chở hàng xuất phát từ cảng Singapore đi đến cảng Tiên Sa cách 1000 hải lý. Gọi v (hải lý/giờ) là vận tốc của tàu $(v>0)$. Dữ liệu kỹ thuật cho thấy chi phí nhiên liệu vận hành của con tàu là 0,02. v³ $(USD/gi\dot{\sigma})$. Các chi phí vận hành cố định khác như lương thuyền viên, khấu hao, bảo hiểm, ... không phụ thuộc vào vận tốc tàu là 625 USD/giờ. Hỏi thuyền trưởng cần duy trì vận tốc trung bình là bao nhiêu hải lý/giờ để tổng chi phí cho toàn bộ chuyến đi là thấp nhất?
+
+---
+
 ## 1. Format Đề Bài Tổng Quát
 
 ### Dạng 1: Bài toán tối ưu chi phí NHỎ NHẤT (Không giới hạn miền)
@@ -26,10 +37,6 @@ $$f(x) = \left( c + b \cdot x^3 \right) \cdot \frac{a}{x}$$
 ---
 
 ## 3. Sơ Đồ Thuật Toán (Flowcharts)
-
-![Sơ đồ giải bài toán Min](Min_format.svg)
-![Sơ đồ giải bài toán Max](Max_format.svg)
-
 ### Source code Mermaid (Dùng để dán vào Draw.io)
 
 **Code cho Sơ đồ Min:**
@@ -95,11 +102,3 @@ $$f(x) = a \cdot b \cdot x^2 + \frac{a \cdot c}{2x} + \frac{a \cdot c}{2x}$$
 $$a \cdot b \cdot x^2 = \frac{a \cdot c}{2x} \Rightarrow x^3 = \frac{c}{2b} \Rightarrow x = \sqrt[3]{\frac{c}{2b}}$$
 
 ---
-
-## 5. Ràng buộc Thuật toán & Triển khai mã (C/C++)
-
-Khi chuyển đổi mô hình toán học này thành các khối mã thực thi trên vi điều khiển hoặc phần mềm mô phỏng, cần lưu ý một số yếu tố để đảm bảo tính ổn định:
-
-* **Tận dụng Standard Libraries:** Trong các tính toán khai căn hoặc lũy thừa, ưu tiên sử dụng các hàm toán học từ thư viện chuẩn (ví dụ `<cmath>`) thay vì tự viết các phép tính thô để tận dụng các bộ tăng tốc API, giúp giảm thiểu độ trễ.
-* **So sánh số thực:** Vì hàm số chứa các phép chia $1/x$, kết quả đạo hàm sẽ là số thực (floating-point). Khi giải thuật toán bằng C++, không sử dụng toán tử quan hệ `==` để tìm điểm tới hạn. Thay vào đó, hãy sử dụng độ lệch chuẩn (epsilon): `std::fabs(val1 - val2) < epsilon`.
-* **Tổ chức file khi kiểm thử:** Trong quá trình test thuật toán (viết unit test), bạn có thể gom file định nghĩa (`.h`) và file thực thi (`.cpp`) vào cùng một thư mục. Cấu trúc phẳng này sẽ giúp việc quan sát luồng dữ liệu, đặt breakpoint và debug các giá trị cực trị dễ dàng hơn.
